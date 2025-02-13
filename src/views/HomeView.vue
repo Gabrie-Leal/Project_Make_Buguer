@@ -1,7 +1,8 @@
 <template>
-  <div class="home">
-    <h1>home</h1>
-  </div>
+  <main>
+    <h1>Home</h1>
+  </main>
+  <FooterBurguer/>
 </template>
 
 <script>{
