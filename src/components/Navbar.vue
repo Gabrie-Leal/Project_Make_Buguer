@@ -49,7 +49,7 @@
     }
 
     nav a{
-        color:var(--corTexto);
+        color:#fcba03;
 
         transition: .5s;
     }

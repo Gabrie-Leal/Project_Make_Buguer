@@ -24,28 +24,22 @@ export default {
 </script>
 
 <style>
-  * {
+   * {
     font-family: Helvetica;
-    border: 0;
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
-    padding: 0;
   }
 
-  :root{
-    --corTitulo:#222;
-    --corTexto:#FCBA03;
-  }
-
-  main{
-    margin:50px;
+  .main-container {
+    margin: 50px;
     min-height: 250px;
   }
 
-  h1{
+  h1 {
     text-align: center;
     font-size: 42px;
-    color:var(--corTitulo);
     margin-bottom: 30px;
+    color: #222;
   }
 </style>
