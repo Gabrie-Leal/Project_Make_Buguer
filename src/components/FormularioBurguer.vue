@@ -1,7 +1,7 @@
 <template>
     <p>Componente de mensagem</p>
     <div>
-        <form id="burguer-form">
+        <form id="burguer-form" @submit="criarHamburguer">
             <div class="input-container">
                 <label for="nome">Nome do cliente:</label>
                 <input type="text" name="nome" id="nome" v-model="nomeCliente" placeholder="Digite seu nome">
@@ -40,7 +40,7 @@
                 <label id="opcionais-title" fora="opcionais">Selecione os opcionais:</label>
                 
                 <div class="checkbox-container" v-for="opcional in opcionaisData" :key="opcional.id">
-                    <input type="checkbox" name="opcionais" v-model="opicionais" value="opcional.tipo">
+                    <input type="checkbox" name="opcionais" v-model="opcionais" :value="opcional.tipo">
                     <span>{{ opcional.tipo }}</span>
                 </div>
                 
@@ -71,12 +71,12 @@
                 pao:null,
                 carne:null,
                 opcionais:[],
-                status:"Solicitado",
                 msg:null,
             }
         },
 
         methods:{
+            //pegando dados do json
             async getIngredientes(){
                 const requisicao = await fetch("http://localhost:3000/ingredientes");
                 const data = await requisicao.json();//espera a requisicao, espera transformar p/ json
@@ -85,6 +85,40 @@
                 this.carnes = data.carnes;
                 this.opcionaisData = data.opcionais;
             },
+            //enviando dados para o json
+            //@submit no form
+            async criarHamburguer(e){
+                e.preventDefault();
+
+                //dados preenchidos, parte Data
+                const data = {
+                    nomeCliente : this.nomeCliente,
+                    carne : this.carne,
+                    pao : this.pao,
+                    opcionais: Array.from(this.opcionais),
+                    status:"solicitado",
+                };
+
+                //transformar o objeto em texto json para enviar para o servidor
+                const dataJson = JSON.stringify(data);//texto com formato json
+
+                //inserindo o dado no json, enviando a requisicao
+                const requisicao = await fetch("http://localhost:3000/burgers",{
+                    method:"POST",
+                    headers: { "Content-Type":"application/json"},
+                    body: dataJson
+                    }
+                )
+
+                //verificando se foi enviado
+                const res = await requisicao.json();
+                
+                //limpando os campos
+                this.nome="";
+                this.carne="";
+                this.pao="";
+                this.opcionais="";
+            }
         },
 
         mounted(){
