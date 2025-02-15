@@ -17,7 +17,7 @@
       background-position: 0 -500px;
       background-size: cover;
       background-repeat: no-repeat;
-      height: 500px;
+      height: 200px;
       display: flex;
       align-items: center;
       justify-content: flex-start;
