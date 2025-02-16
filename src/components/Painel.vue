@@ -1,5 +1,6 @@
 <template>
   <div id="burguer-table">
+    <Message :msg="msg" v-show="msg"/>
     <div>
       <div id="burguer-table-heading">
         <div class="order-id">#</div>
@@ -31,7 +32,7 @@
                 {{ statusOpc.tipo }}
             </option>
             </select>
-            <button class="delete-btn">Cancelar</button>
+            <button class="delete-btn" @click="deletarBurguer(burguer.id)">Cancelar</button>
           </div>
         </div>
       </div>
@@ -40,14 +41,20 @@
 </template>
 
 <script>
+import Message from './Message.vue';
 export default {
   name: "Painel",
+
+    components:{
+        Message,
+    },
 
   data() {
     return{
         burguers:null,
         burguer_id:null,
         status:[],
+        msg:"",
     }
   },
 
@@ -68,6 +75,19 @@ export default {
         const data = await requisicao.json();//transforma a requisiao em json
 
         this.status = data;
+    },
+
+    async deletarBurguer(id){
+        const requisicao = await fetch("http://localhost:3000/burgers/"+id,{
+            method: "DELETE",
+        });
+        const res = await requisicao.json();
+
+        //mensagem de remocao de pedido
+        this.msg="Pedido ("+id+") removido com sucesso!";
+        setTimeout(()=>this.msg="",3000);
+
+        this.getPedidos();//Atualizando a lista de pedidos
     }
   },
 

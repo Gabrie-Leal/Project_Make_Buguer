@@ -124,7 +124,7 @@ import Message from './Message.vue';
                 setTimeout(() => this.msg="",3000);
                 
                 //limpando os campos
-                this.nome="";
+                this.nomeCliente="";
                 this.carne="";
                 this.pao="";
                 this.opcionais="";

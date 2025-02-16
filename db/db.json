@@ -83,13 +83,17 @@
   ],
   "burgers": [
     {
-      "id": "85e5",
-      "nomeCliente": "texte",
-      "carne": "Maminha",
-      "pao": "Pão Francês",
+      "id": "e246",
+      "nomeCliente": "Andre",
+      "carne": "Picanha",
+      "pao": "Italiano Branco",
       "opcionais": [
-        "Pepino",
-        "Cebola roxa"
+        "Bacon",
+        "Cheddar",
+        "Tomate",
+        "Salame",
+        "Cebola roxa",
+        "Pepino"
       ],
       "status": "Solicitado"
     }
