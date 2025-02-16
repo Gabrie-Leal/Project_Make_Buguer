@@ -1,5 +1,5 @@
 <template>
-    <p>Componente de mensagem</p>
+    <Message :msg="msg" v-show="msg" />
     <div>
         <form id="burguer-form" @submit="criarHamburguer">
             <div class="input-container">
@@ -56,8 +56,13 @@
 </template>
 
 <script>
+import Message from './Message.vue';
     export default{
         name:'FormularioBurguer',
+
+        components:{
+            Message,
+        },
 
         data(){
             return{
@@ -109,9 +114,14 @@
                     body: dataJson
                     }
                 )
-
                 //verificando se foi enviado
                 const res = await requisicao.json();
+                console.log(res);
+
+                //mensagem do sistema ao inserir pedido
+                this.msg="Pedido (código:"+res.id+") realizado com sucesso!";
+                //limpando o campo de mensagem
+                setTimeout(() => this.msg="",3000);
                 
                 //limpando os campos
                 this.nome="";
