@@ -26,9 +26,9 @@
           </div>
 
           <div>
-            <select name="status" class="status">
+            <select name="status" class="status" @change="updatedBurguer($event,burguer.id)">
               <option value="">Selecione</option>
-              <option value="" v-for="statusOpc in status" :key="statusOpc.id" :selected="burguer.status == statusOpc.tipo">
+              <option :value="statusOpc.tipo" v-for="statusOpc in status" :key="statusOpc.id" :selected="burguer.status == statusOpc.tipo">
                 {{ statusOpc.tipo }}
             </option>
             </select>
@@ -88,6 +88,19 @@ export default {
         setTimeout(()=>this.msg="",3000);
 
         this.getPedidos();//Atualizando a lista de pedidos
+    },
+
+    //atualizando status dos pedidos
+    async updatedBurguer(event,id){
+        const option = event.target.value;//valor que o usurio colocou
+        const dataJson = JSON.stringify({status:option})//transformando o json de status em string
+
+        const requisicao = await fetch("http://localhost:3000/burgers/"+id,{
+            method: "PATCH",//atualiza so oq vamos enviar, no caso o status
+            headers:{"Content-Type": "application/json"},
+            body: dataJson,
+        })
+        const res = await requisicao.json();
     }
   },
 
