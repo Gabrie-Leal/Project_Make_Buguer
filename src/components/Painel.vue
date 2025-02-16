@@ -31,6 +31,7 @@
               <option :value="statusOpc.tipo" v-for="statusOpc in status" :key="statusOpc.id" :selected="burguer.status == statusOpc.tipo">
                 {{ statusOpc.tipo }}
             </option>
+            <Message :msg="msg" v-show="msg"/>
             </select>
             <button class="delete-btn" @click="deletarBurguer(burguer.id)">Cancelar</button>
           </div>
@@ -101,6 +102,9 @@ export default {
             body: dataJson,
         })
         const res = await requisicao.json();
+
+        this.msg="Pedido ("+id+") atualizado para: "+option;
+        setTimeout(()=>this.msg="",3000);
     }
   },
 

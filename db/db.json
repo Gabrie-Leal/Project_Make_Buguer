@@ -81,21 +81,5 @@
       "tipo": "Finalizado"
     }
   ],
-  "burgers": [
-    {
-      "id": "e246",
-      "nomeCliente": "Andre",
-      "carne": "Picanha",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Bacon",
-        "Cheddar",
-        "Tomate",
-        "Salame",
-        "Cebola roxa",
-        "Pepino"
-      ],
-      "status": "Solicitado"
-    }
-  ]
+  "burgers": []
 }
