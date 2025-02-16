@@ -1,11 +1,9 @@
 <template>
-  <div>
     <Banner/>
-    <div class="main-container">
+    <main>
       <h1>Monte o seu burger:</h1>
       <FormularioBurguer/>
-    </div>
-  </div>
+    </main>
 </template>
 
 <script>

@@ -31,7 +31,7 @@ export default {
     box-sizing: border-box;
   }
 
-  .main-container {
+  main{
     margin: 50px;
     min-height: 550px;
   }
