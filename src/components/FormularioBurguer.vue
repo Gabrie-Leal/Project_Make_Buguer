@@ -119,7 +119,7 @@ import Message from './Message.vue';
                 console.log(res);
 
                 //mensagem do sistema ao inserir pedido
-                this.msg="Pedido (código:"+res.id+") realizado com sucesso!";
+                this.msg="Pedido (#:"+res.id+") realizado com sucesso!";
                 //limpando o campo de mensagem
                 setTimeout(() => this.msg="",3000);
                 
