@@ -98,7 +98,7 @@ export default {
 
         const requisicao = await fetch("http://localhost:3000/burgers/"+id,{
             method: "PATCH",//atualiza so oq vamos enviar, no caso o status
-            headers:{"Content-Type": "application/json"},
+            headers:{"Content-Type": "application/json"},//informando que os dados enviados por servidor sao json
             body: dataJson,
         })
         const res = await requisicao.json();

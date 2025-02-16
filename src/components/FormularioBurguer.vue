@@ -82,6 +82,8 @@ import Message from './Message.vue';
 
         methods:{
             //pegando dados do json
+            //async indica assincrona(operacoes que levam um tempo para ser concluidas)
+            //await espera ate q seja concluida
             async getIngredientes(){
                 const requisicao = await fetch("http://localhost:3000/ingredientes");
                 const data = await requisicao.json();//espera a requisicao, espera transformar p/ json

@@ -81,5 +81,17 @@
       "tipo": "Finalizado"
     }
   ],
-  "burgers": []
+  "burgers": [
+    {
+      "id": "e4ba",
+      "nomeCliente": "GABRIEL LEAL DE OLIVEIRA",
+      "carne": "Alcatra",
+      "pao": "Parmesão e Orégano",
+      "opcionais": [
+        "Cheddar",
+        "Bacon"
+      ],
+      "status": "Em produção"
+    }
+  ]
 }
