@@ -83,84 +83,15 @@
   ],
   "burgers": [
     {
-      "id": "0310",
-      "nomeCliente": "Andre",
-      "carne": "Alcatra",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Cheddar",
-        "Bacon"
-      ],
-      "status": "solicitado"
-    },
-    {
-      "id": "cbde",
-      "nomeCliente": "wdwd",
-      "carne": "Picanha",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Salame",
-        "Cheddar"
-      ],
-      "status": "solicitado"
-    },
-    {
-      "id": "c58d",
-      "nomeCliente": "wdwd",
-      "carne": null,
-      "pao": "Parmesão e Orégano",
-      "opcionais": [
-        "Bacon",
-        "Cheddar",
-        "Salame"
-      ],
-      "status": "solicitado"
-    },
-    {
-      "id": "04ff",
-      "nomeCliente": "wdwd",
-      "carne": "Picanha",
-      "pao": "Parmesão e Orégano",
-      "opcionais": [
-        "Cheddar",
-        "Bacon"
-      ],
-      "status": "solicitado"
-    },
-    {
-      "id": "a885",
-      "nomeCliente": "GABRIEL LEAL DE OLIVEIRA",
-      "carne": "Veggie burger",
-      "pao": "Parmesão e Orégano",
-      "opcionais": [
-        "Bacon",
-        "Cheddar"
-      ],
-      "status": "solicitado"
-    },
-    {
-      "id": "e975",
-      "nomeCliente": "andere de",
-      "carne": "Picanha",
-      "pao": "Integral",
-      "opcionais": [
-        "Cheddar",
-        "Salame",
-        "Cebola roxa"
-      ],
-      "status": "solicitado"
-    },
-    {
-      "id": "2632",
-      "nomeCliente": "wdwd",
-      "carne": "Alcatra",
+      "id": "85e5",
+      "nomeCliente": "texte",
+      "carne": "Maminha",
       "pao": "Pão Francês",
       "opcionais": [
-        "Cheddar",
-        "Bacon",
+        "Pepino",
         "Cebola roxa"
       ],
-      "status": "solicitado"
+      "status": "Solicitado"
     }
   ]
 }

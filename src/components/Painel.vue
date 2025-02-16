@@ -27,7 +27,9 @@
           <div>
             <select name="status" class="status">
               <option value="">Selecione</option>
-              <option value="">status</option>
+              <option value="" v-for="statusOpc in status" :key="statusOpc.id" :selected="burguer.status == statusOpc.tipo">
+                {{ statusOpc.tipo }}
+            </option>
             </select>
             <button class="delete-btn">Cancelar</button>
           </div>
@@ -58,6 +60,14 @@ export default {
         console.log(this.burguers);
 
         //resgatando os status
+        this.getStatus();//extraindo os status
+    },
+
+    async getStatus(){
+        const requisicao = await fetch("http://localhost:3000/status");//acessando os status
+        const data = await requisicao.json();//transforma a requisiao em json
+
+        this.status = data;
     }
   },
 

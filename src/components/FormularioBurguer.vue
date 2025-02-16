@@ -101,7 +101,7 @@ import Message from './Message.vue';
                     carne : this.carne,
                     pao : this.pao,
                     opcionais: Array.from(this.opcionais),
-                    status:"solicitado",
+                    status:"Solicitado",
                 };
 
                 //transformar o objeto em texto json para enviar para o servidor
@@ -119,7 +119,7 @@ import Message from './Message.vue';
                 console.log(res);
 
                 //mensagem do sistema ao inserir pedido
-                this.msg="Pedido (#:"+res.id+") realizado com sucesso!";
+                this.msg="Pedido (#: "+res.id+") realizado com sucesso!";
                 //limpando o campo de mensagem
                 setTimeout(() => this.msg="",3000);
                 
