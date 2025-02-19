@@ -1,19 +1,64 @@
-# project_make_burguer
+# 🍔 Montagem de Hambúrguer - Vue.js
 
-## Project setup
+## 📝 Sobre o Projeto
+Este projeto foi desenvolvido como parte do meu aprendizado em **Front-End com Vue.js**, utilizando **JSON Server** para simular um banco de dados. A aplicação permite que os usuários montem um hambúrguer com ingredientes dinâmicos retirados de um arquivo JSON e enviem o pedido para uma página de pedidos, onde ele é registrado no JSON Server.
+
+## 🛠️ Tecnologias Utilizadas
+- **Vue.js** - Framework JavaScript para construção da interface.
+- **JSON Server** - Simulação de um banco de dados local.
+- **HTML5 e CSS3** - Estruturação e estilização da aplicação.
+- **JavaScript (ES6+)** - Lógica da aplicação e integração com JSON Server.
+
+## 📚 Funcionalidades
+- Seleção dinâmica de ingredientes para montar um hambúrguer.
+- Exibição dos ingredientes disponíveis a partir de um arquivo JSON.
+- Envio do pedido para a página de pedidos.
+- Registro dos pedidos no JSON Server.
+
+## ⚡ Como Executar o Projeto
+### 1. Clone o repositório:
+```sh
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
+cd nome-do-repositorio
 ```
+### 2. Instale as dependências:
+```sh
 npm install
 ```
-
-### Compiles and hot-reloads for development
+### 3. Inicie o JSON Server:
+```sh
+npx json-server --watch db.json
 ```
+### 4. Inicie o projeto Vue.js:
+```sh
 npm run serve
 ```
 
-### Compiles and minifies for production
+## 📚 Estrutura do Projeto
 ```
-npm run build
+/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── BurgerBuilder.vue
+│   │   ├── OrderPage.vue
+│   ├── assets/
+│   ├── views/
+│   ├── App.vue
+│   ├── main.js
+├── db.json
+├── package.json
+├── README.md
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 🚀 Melhorias Futuras
+- Implementação de um sistema de autenticação para usuários.
+- Adição de um carrinho de compras antes da finalização do pedido.
+- Persistência dos pedidos em um banco de dados real.
+
+## 🌟 Autor
+Desenvolvido por **Seu Nome** – Conecte-se comigo no [LinkedIn](https://www.linkedin.com/in/gabriel-leal-526482231/).
+
+---
+💪 Feedbacks e contribuições são sempre bem-vindos! Sinta-se à vontade para abrir uma issue ou enviar um pull request. 🚀
+

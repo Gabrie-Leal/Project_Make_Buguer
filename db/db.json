@@ -83,15 +83,15 @@
   ],
   "burgers": [
     {
-      "id": "e4ba",
+      "id": "686d",
       "nomeCliente": "GABRIEL LEAL DE OLIVEIRA",
-      "carne": "Alcatra",
-      "pao": "Parmesão e Orégano",
+      "carne": "Picanha",
+      "pao": "Italiano Branco",
       "opcionais": [
-        "Cheddar",
-        "Bacon"
+        "Bacon",
+        "Cheddar"
       ],
-      "status": "Em produção"
+      "status": "Solicitado"
     }
   ]
 }
