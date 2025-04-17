@@ -51,14 +51,9 @@ npm run serve
 ├── README.md
 ```
 
-## 🚀 Melhorias Futuras
-- Implementação de um sistema de autenticação para usuários.
-- Adição de um carrinho de compras antes da finalização do pedido.
-- Persistência dos pedidos em um banco de dados real.
-
 ## 🌟 Autor
-Desenvolvido por **Seu Nome** – Conecte-se comigo no [LinkedIn](https://www.linkedin.com/in/gabriel-leal-526482231/).
+Desenvolvido por **Gabriel Leal** – [LinkedIn](https://www.linkedin.com/in/gabriel-leal-526482231/).
 
 ---
-💪 Feedbacks e contribuições são sempre bem-vindos! Sinta-se à vontade para abrir uma issue ou enviar um pull request. 🚀
+💪 Feedbacks e contribuições são sempre bem-vindos!🚀
 
